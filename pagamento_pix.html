@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagamento PIX</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="./css/styles.css" rel="stylesheet">
+  <link rel="shortcut icon" href="./image/camisa.gif" type="image/x-icon">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">FootCoder</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="produtos.html">Camisetas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="carrinho.html">Carrinho</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Pagamento PIX</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <h1 class="mb-4">Pagamento PIX</h1>
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Pague com PIX</h5>
+          <p class="card-text">Utilize o QR Code abaixo para realizar o pagamento.</p>
+          <div class="text-center">
+            <img src="./image/QR_Code.png" alt="QR Code para pagamento via PIX" class="img-fluid" style="max-width: 150px;">
+          </div>
+          <p class="mt-3">Ou copie o código PIX abaixo:</p>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" value="Código PIX aqui" id="pixCode" readonly>
+            <button class="btn btn-outline-secondary" type="button" id="copyPixCodeBtn">Copiar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="copyToast" class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        Código PIX copiado!
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+
+<footer class="footer mt-auto py-3">
+  <div class="container text-center">
+    <span class="text-muted">© 2024 FootCoder</span>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<script>
+  document.getElementById('copyPixCodeBtn').addEventListener('click', function() {
+    const pixCodeInput = document.getElementById('pixCode');
+    pixCodeInput.select();
+    pixCodeInput.setSelectionRange(0, 99999); // Para dispositivos móveis
+    document.execCommand('copy');
+    
+    const toast = new bootstrap.Toast(document.getElementById('copyToast'));
+    toast.show();
+  });
+</script>
+</body>
+</html>

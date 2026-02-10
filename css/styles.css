@@ -1,0 +1,45 @@
+/* Estilos gerais */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos para o navbar */
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+/* Estilos para os botões */
+.btn-add-to-cart {
+  width: 100%;
+}
+
+/* Estilos para o modal */
+.modal-dialog {
+  max-width: 800px;
+}
+
+/* Estilos para o rodapé */
+footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Estilos para os links no rodapé */
+footer a {
+  color: #495057;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
