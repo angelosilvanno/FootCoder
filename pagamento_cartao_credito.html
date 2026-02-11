@@ -10,7 +10,7 @@
   <link href="./css/styles.css" rel="stylesheet">
   <link rel="shortcut icon" href="./image/camisa.gif" type="image/x-icon">
 </head>
-<body class="bg-light" style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<body class="bg-secondary bg-opacity-10" style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; min-height: 100vh; display: flex; flex-direction: column;">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm py-3">
   <div class="container-fluid px-4">
@@ -37,33 +37,33 @@
   </div>
 </nav>
 
-<div class="container mt-5 pt-5 pb-5">
-  <h1 class="fw-bold mb-4 text-dark text-center">Pagamento</h1>
-  <div class="row">
-    <div class="col-lg-6 offset-lg-3">
-      <div class="card border-0 shadow-lg" style="border-radius: 16px;">
-        <div class="card-body p-5">
-          <h5 class="card-title fw-bold mb-4 text-center">Dados do Cartão</h5>
+<div class="container flex-grow-1 d-flex align-items-center justify-content-center mt-5 pt-4">
+  <div class="row w-100 justify-content-center">
+    <div class="col-lg-5 col-md-8">
+      <div class="card border-0 shadow-lg p-2" style="border-radius: 20px; background: #ffffff;">
+        <div class="card-body p-4 p-md-5">
+          <h5 class="card-title fw-bold mb-1 text-center fs-3">Pagamento</h5>
+          <p class="text-muted text-center mb-4 small">Insira os dados do seu cartão de crédito</p>
           <form id="paymentForm">
             <div class="mb-3">
-              <label for="cardNumber" class="form-label fw-semibold text-muted small">Número do Cartão</label>
-              <input type="text" class="form-control form-control-lg border-2" id="cardNumber" placeholder="1234 5678 9012 3456" required style="border-radius: 10px;">
+              <label for="cardNumber" class="form-label fw-bold text-dark small">Número do Cartão</label>
+              <input type="text" class="form-control form-control-lg border-2 bg-light" id="cardNumber" placeholder="0000 0000 0000 0000" required style="border-radius: 12px; font-size: 0.95rem;">
             </div>
             <div class="mb-3">
-              <label for="cardName" class="form-label fw-semibold text-muted small">Nome no Cartão</label>
-              <input type="text" class="form-control form-control-lg border-2" id="cardName" placeholder="NOME DO TITULAR" required style="border-radius: 10px;">
+              <label for="cardName" class="form-label fw-bold text-dark small">Nome impresso no cartão</label>
+              <input type="text" class="form-control form-control-lg border-2 bg-light" id="cardName" placeholder="NOME DO TITULAR" required style="border-radius: 12px; font-size: 0.95rem;">
             </div>
             <div class="row mb-4">
-              <div class="col-md-6 mb-3 mb-md-0">
-                <label for="expiryDate" class="form-label fw-semibold text-muted small">Validade</label>
-                <input type="text" class="form-control form-control-lg border-2" id="expiryDate" placeholder="MM/AA" required style="border-radius: 10px;">
+              <div class="col-6">
+                <label for="expiryDate" class="form-label fw-bold text-dark small">Validade</label>
+                <input type="text" class="form-control form-control-lg border-2 bg-light" id="expiryDate" placeholder="MM/AA" required style="border-radius: 12px; font-size: 0.95rem;">
               </div>
-              <div class="col-md-6">
-                <label for="cvv" class="form-label fw-semibold text-muted small">CVV</label>
-                <input type="text" class="form-control form-control-lg border-2" id="cvv" placeholder="123" required style="border-radius: 10px;">
+              <div class="col-6">
+                <label for="cvv" class="form-label fw-bold text-dark small">CVV</label>
+                <input type="text" class="form-control form-control-lg border-2 bg-light" id="cvv" placeholder="000" required style="border-radius: 12px; font-size: 0.95rem;">
               </div>
             </div>
-            <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold py-3 shadow-sm rounded-3">Confirmar Pagamento</button>
+            <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold py-3 shadow rounded-3 border-0 transition-all">Confirmar Pagamento</button>
           </form>
         </div>
       </div>
@@ -82,7 +82,7 @@
   </div>
 </div>
 
-<footer class="bg-dark text-white py-5 mt-5">
+<footer class="bg-dark text-white py-4">
   <div class="container text-center">
     <span class="text-secondary small">&copy; <script>document.write(new Date().getFullYear())</script> FootCoder. Todos os direitos reservados.</span>
   </div>
@@ -99,7 +99,7 @@
     setTimeout(function() {
       const toast = new bootstrap.Toast(document.getElementById('paymentToast'));
       toast.show();
-    }, 1000);
+    }, 800);
   });
 </script>
 </body>
