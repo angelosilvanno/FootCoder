@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagamento com Boleto</title>
+  <title>Boleto</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom CSS -->
@@ -21,7 +21,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link fw-bold px-3 text-uppercase" href="index.html" style="font-size: 0.9rem;">Home</a>
+          <a class="nav-link fw-bold px-3 text-uppercase" href="index.html" style="font-size: 0.9rem;">Inicio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link fw-bold px-3 text-uppercase" href="produtos.html" style="font-size: 0.9rem;">Camisetas</a>
@@ -30,31 +30,31 @@
           <a class="nav-link fw-bold px-3 text-uppercase" href="carrinho.html" style="font-size: 0.9rem;">Carrinho</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active fw-bold px-3 text-uppercase text-primary" aria-current="page" href="#" style="font-size: 0.9rem;">Pagamento com Boleto</a>
+          <a class="nav-link active fw-bold px-3 text-uppercase text-primary" aria-current="page" href="#" style="font-size: 0.9rem;">Boleto</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="container flex-grow-1 d-flex align-items-center justify-content-center mt-5 pt-4 pb-5">
-  <h1 class="visually-hidden">Pagamento com Boleto</h1>
+<div class="container flex-grow-1 d-flex align-items-center justify-content-center mt-5 pt-5 pb-5">
+  <h1 class="visually-hidden">Boleto</h1>
   <div class="row w-100 justify-content-center">
     <div class="col-lg-5 col-md-8 offset-lg-0">
-      <div class="card border-0 shadow-lg p-2" style="border-radius: 20px; background: #ffffff;">
+      <div class="card border-0 shadow-lg p-2" style="border-radius: 24px; background: #ffffff;">
         <div class="card-body p-4 p-md-5">
-          <h5 class="card-title fw-bold mb-1 text-center fs-3">Pagamento</h5>
-          <p class="text-muted text-center mb-4 small">Confirme seus dados para gerar o boleto bancário</p>
+          <h5 class="card-title fw-bold mb-2 text-center fs-2" style="color: #1a1d20;">Pagamento</h5>
+          <p class="text-muted text-center mb-5 fw-medium" style="font-size: 0.95rem;">Confirme seus dados para gerar o boleto bancário</p>
           <form id="boletoForm">
-            <div class="mb-3">
-              <label for="fullName" class="form-label fw-bold text-dark small text-uppercase" style="letter-spacing: 0.5px;">Nome Completo</label>
-              <input type="text" class="form-control form-control-lg border-2 bg-light shadow-none" id="fullName" placeholder="Digite seu nome completo" required style="border-radius: 12px; font-size: 0.95rem;">
-            </div>
             <div class="mb-4">
-              <label for="cpf" class="form-label fw-bold text-dark small text-uppercase" style="letter-spacing: 0.5px;">CPF</label>
-              <input type="text" class="form-control form-control-lg border-2 bg-light shadow-none" id="cpf" placeholder="000.000.000-00" required style="border-radius: 12px; font-size: 0.95rem;">
+              <label for="fullName" class="form-label fw-bold text-secondary small text-uppercase" style="letter-spacing: 1px;">Nome Completo</label>
+              <input type="text" class="form-control form-control-lg border-2 bg-light shadow-none" id="fullName" placeholder="Digite seu nome completo" required style="border-radius: 12px; font-size: 0.95rem; border-color: #e9ecef;">
             </div>
-            <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold py-3 shadow rounded-3 border-0 text-uppercase" style="letter-spacing: 1px; font-size: 0.9rem;">Gerar Boleto agora</button>
+            <div class="mb-5">
+              <label for="cpf" class="form-label fw-bold text-secondary small text-uppercase" style="letter-spacing: 1px;">CPF</label>
+              <input type="text" class="form-control form-control-lg border-2 bg-light shadow-none" id="cpf" placeholder="000.000.000-00" required style="border-radius: 12px; font-size: 0.95rem; border-color: #e9ecef;">
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold py-3 shadow rounded-pill border-0 text-uppercase" style="letter-spacing: 2px; font-size: 0.85rem; transition: all 0.3s ease;">Gerar Boleto agora</button>
           </form>
         </div>
       </div>
