@@ -10,50 +10,51 @@
   <link href="./css/styles.css" rel="stylesheet">
   <link rel="shortcut icon" href="./image/camisa.gif" type="image/x-icon">
 </head>
-<body>
+<body class="bg-secondary bg-opacity-10 d-flex flex-column min-vh-100" style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">FootCoder</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm py-3" style="border-bottom: 3px solid #0d6efd;">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand fw-bold fs-3 tracking-tight" href="index.html" style="letter-spacing: -1.5px; text-transform: uppercase;">Foot<span class="text-primary">Coder</span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link fw-bold px-3 text-uppercase" href="index.html" style="font-size: 0.9rem;">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="produtos.html">Camisetas</a>
+          <a class="nav-link fw-bold px-3 text-uppercase" href="produtos.html" style="font-size: 0.9rem;">Camisetas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="carrinho.html">Carrinho</a>
+          <a class="nav-link fw-bold px-3 text-uppercase" href="carrinho.html" style="font-size: 0.9rem;">Carrinho</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Pagamento com Boleto</a>
+          <a class="nav-link active fw-bold px-3 text-uppercase text-primary" aria-current="page" href="#" style="font-size: 0.9rem;">Pagamento com Boleto</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="container mt-4">
-  <h1 class="mb-4">Pagamento com Boleto</h1>
-  <div class="row">
-    <div class="col-lg-8 offset-lg-2">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Confirme os detalhes para gerar o boleto</h5>
+<div class="container flex-grow-1 d-flex align-items-center justify-content-center mt-5 pt-4 pb-5">
+  <h1 class="visually-hidden">Pagamento com Boleto</h1>
+  <div class="row w-100 justify-content-center">
+    <div class="col-lg-5 col-md-8 offset-lg-0">
+      <div class="card border-0 shadow-lg p-2" style="border-radius: 20px; background: #ffffff;">
+        <div class="card-body p-4 p-md-5">
+          <h5 class="card-title fw-bold mb-1 text-center fs-3">Pagamento</h5>
+          <p class="text-muted text-center mb-4 small">Confirme seus dados para gerar o boleto bancário</p>
           <form id="boletoForm">
             <div class="mb-3">
-              <label for="fullName" class="form-label">Nome Completo</label>
-              <input type="text" class="form-control" id="fullName" placeholder="Nome Completo" required>
+              <label for="fullName" class="form-label fw-bold text-dark small text-uppercase" style="letter-spacing: 0.5px;">Nome Completo</label>
+              <input type="text" class="form-control form-control-lg border-2 bg-light shadow-none" id="fullName" placeholder="Digite seu nome completo" required style="border-radius: 12px; font-size: 0.95rem;">
             </div>
-            <div class="mb-3">
-              <label for="cpf" class="form-label">CPF</label>
-              <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
+            <div class="mb-4">
+              <label for="cpf" class="form-label fw-bold text-dark small text-uppercase" style="letter-spacing: 0.5px;">CPF</label>
+              <input type="text" class="form-control form-control-lg border-2 bg-light shadow-none" id="cpf" placeholder="000.000.000-00" required style="border-radius: 12px; font-size: 0.95rem;">
             </div>
-            <button type="submit" class="btn btn-primary w-100">Gerar Boleto</button>
+            <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold py-3 shadow rounded-3 border-0 text-uppercase" style="letter-spacing: 1px; font-size: 0.9rem;">Gerar Boleto agora</button>
           </form>
         </div>
       </div>
@@ -62,35 +63,26 @@
 </div>
 
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-  <div id="boletoToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="d-flex">
-      <div class="toast-body">
-        Boleto gerado com sucesso!
+  <div id="boletoToast" class="toast align-items-center text-white bg-success border-0 shadow-lg" role="alert" aria-live="assertive" aria-atomic="true" style="border-radius: 12px;">
+    <div class="d-flex p-2">
+      <div class="toast-body fw-bold">
+        ✅ Boleto gerado com sucesso!
       </div>
       <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
   </div>
 </div>
 
-<footer class="footer mt-auto py-3">
+<footer class="bg-dark text-white py-5 mt-auto" style="border-top: 5px solid #0d6efd;">
   <div class="container text-center">
-    <span class="text-muted">© 2024 FootCoder</span>
+    <span class="text-secondary small fw-bold text-uppercase" style="letter-spacing: 1px;">&copy; <script>document.write(new Date().getFullYear())</script> FootCoder. Todos os direitos reservados.</span>
   </div>
 </footer>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-<script>
-  document.getElementById('boletoForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    // Simulando a geração do boleto
-    setTimeout(function() {
-      const toast = new bootstrap.Toast(document.getElementById('boletoToast'));
-      toast.show();
-    }, 1000);
-  });
-</script>
+<!-- External JS -->
+<script src="./js/boleto.js"></script>
 </body>
 </html>
