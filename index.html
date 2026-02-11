@@ -10,9 +10,9 @@
 </head>
 
 <body class="bg-light" style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm py-3">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm py-3" style="border-bottom: 3px solid #0d6efd;">
   <div class="container-fluid px-4">
-    <a class="navbar-brand fw-bold fs-4 tracking-tight" href="#" style="letter-spacing: -1px;">Foot<span class="text-primary">Coder</span></a>
+    <a class="navbar-brand fw-bold fs-3 tracking-tight" href="#" style="letter-spacing: -1.5px; text-transform: uppercase;">Foot<span class="text-primary">Coder</span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,35 +20,58 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active fw-medium px-3" aria-current="page" href="#">Home</a>
+          <a class="nav-link active fw-bold px-3 text-uppercase" aria-current="page" href="#" style="font-size: 0.9rem;">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-medium px-3" href="./produtos.html">Camisetas</a>
+          <a class="nav-link fw-bold px-3 text-uppercase" href="./produtos.html" style="font-size: 0.9rem;">Camisetas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-medium px-3" href="./carrinho.html">Carrinho</a>
+          <a class="nav-link fw-bold px-3 text-uppercase d-flex align-items-center" href="./carrinho.html" style="font-size: 0.9rem;">
+            Carrinho <span id="cart-count" class="badge rounded-pill bg-primary ms-2" style="font-size: 0.7rem;">0</span>
+          </a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="container mt-5 pt-5 pb-5">
+<!-- Seção Hero - Banner de Impacto -->
+<header class="hero-section text-white d-flex align-items-center shadow-lg" style="height: 60vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat; margin-top: 80px;">
+  <div class="container text-center">
+    <h1 class="display-3 fw-extrabold text-uppercase mb-3" style="letter-spacing: -2px;">Vista o seu <span class="text-primary">Manto</span></h1>
+    <p class="lead fw-bold mb-4 text-uppercase" style="letter-spacing: 2px;">Novas camisas da temporada 2024 disponíveis</p>
+    <a href="#produtos" class="btn btn-primary btn-lg px-5 py-3 fw-bold rounded-pill text-uppercase shadow">Confira as Ofertas</a>
+  </div>
+</header>
+
+<!-- Barra de Diferenciais - Trust Badges -->
+<section class="bg-white py-4 shadow-sm border-bottom">
+  <div class="container">
+    <div class="row text-center fw-bold text-uppercase small" style="letter-spacing: 1px;">
+      <div class="col-md-3 mb-3 mb-md-0">🚀 Frete Grátis acima de R$ 200</div>
+      <div class="col-md-3 mb-3 mb-md-0">💳 12x Sem Juros no Cartão</div>
+      <div class="col-md-3 mb-3 mb-md-0">🔄 Primeira Troca Grátis</div>
+      <div class="col-md-3">🔒 Compra 100% Segura</div>
+    </div>
+  </div>
+</section>
+
+<div id="produtos" class="container mt-5 pb-5">
 
   <div class="row g-4">
     <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
 
-      <div class="card h-100 border-0 shadow-sm hover-shadow transition" style="transition: all 0.3s ease; border-radius: 12px; overflow: hidden;">
+      <div class="card h-100 border-0 shadow-sm hover-shadow transition" style="transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); border-radius: 16px; overflow: hidden; background: #fff;">
 
-        <img src="./image/Corinthians.jpg" class="card-img-top" alt="Time 1" style="height: 280px; object-fit: cover;">
+        <img src="./image/Corinthians.jpg" class="card-img-top" alt="Time 1" style="height: 300px; object-fit: cover; filter: brightness(0.95);">
 
-        <div class="card-body d-flex flex-column justify-content-between p-4">
+        <div class="card-body d-flex flex-column justify-content-between p-4 text-center">
 
-          <h5 class="card-title fw-bold text-dark mb-2">Corinthians</h5>
+          <h5 class="card-title fw-extrabold text-dark mb-2 text-uppercase" style="letter-spacing: 0.5px; font-size: 1.1rem;">Corinthians</h5>
 
-          <p class="card-text text-muted mb-4">Preço: <span class="fw-bold text-primary fs-5">R$ 120,00</span></p>
+          <p class="card-text text-muted mb-4" style="font-size: 0.9rem;">Oferta: <span class="fw-bold text-primary fs-4 d-block">R$ 120,00</span></p>
 
-          <button class="btn btn-dark btn-add-to-cart w-100 fw-semibold py-2 rounded-3 shadow-sm">Adicionar ao Carrinho</button>
+          <button class="btn btn-dark btn-add-to-cart w-100 fw-bold py-3 rounded-pill shadow-sm text-uppercase" style="font-size: 0.75rem; letter-spacing: 1px;">Adicionar ao Carrinho</button>
 
         </div>
       </div>
@@ -56,50 +79,30 @@
 
     <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
 
-      <div class="card h-100 border-0 shadow-sm hover-shadow transition" style="transition: all 0.3s ease; border-radius: 12px; overflow: hidden;">
+      <div class="card h-100 border-0 shadow-sm hover-shadow transition" style="transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); border-radius: 16px; overflow: hidden; background: #fff;">
 
-        <img src="./image/Flamengo.jpg" class="card-img-top" alt="Time 2" style="height: 280px; object-fit: cover;">
+        <img src="./image/Flamengo.jpg" class="card-img-top" alt="Time 2" style="height: 300px; object-fit: cover; filter: brightness(0.95);">
 
-        <div class="card-body d-flex flex-column justify-content-between p-4">
-          <h5 class="card-title fw-bold text-dark mb-2">Flamengo</h5>
-          <p class="card-text text-muted mb-4">Preço: <span class="fw-bold text-primary fs-5">R$ 100,00</span></p>
-          <button class="btn btn-dark btn-add-to-cart w-100 fw-semibold py-2 rounded-3 shadow-sm">Adicionar ao Carrinho</button>
+        <div class="card-body d-flex flex-column justify-content-between p-4 text-center">
+          <h5 class="card-title fw-extrabold text-dark mb-2 text-uppercase" style="letter-spacing: 0.5px; font-size: 1.1rem;">Flamengo</h5>
+          <p class="card-text text-muted mb-4" style="font-size: 0.9rem;">Oferta: <span class="fw-bold text-primary fs-4 d-block">R$ 100,00</span></p>
+          <button class="btn btn-dark btn-add-to-cart w-100 fw-bold py-3 rounded-pill shadow-sm text-uppercase" style="font-size: 0.75rem; letter-spacing: 1px;">Adicionar ao Carrinho</button>
         </div>
       </div>
 
     </div>
 
     <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-      <div class="card h-100 border-0 shadow-sm hover-shadow transition" style="transition: all 0.3s ease; border-radius: 12px; overflow: hidden;">
-        <img src="./image/Fluminense.jpg" class="card-img-top" alt="Time 2" style="height: 280px; object-fit: cover;">
+      <div class="card h-100 border-0 shadow-sm hover-shadow transition" style="transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); border-radius: 16px; overflow: hidden; background: #fff;">
+        <img src="./image/Fluminense.jpg" class="card-img-top" alt="Time 2" style="height: 300px; object-fit: cover; filter: brightness(0.95);">
 
-        <div class="card-body d-flex flex-column justify-content-between p-4">
+        <div class="card-body d-flex flex-column justify-content-between p-4 text-center">
 
-          <h5 class="card-title fw-bold text-dark mb-2">Fluminense</h5>
+          <h5 class="card-title fw-extrabold text-dark mb-2 text-uppercase" style="letter-spacing: 0.5px; font-size: 1.1rem;">Fluminense</h5>
 
-          <p class="card-text text-muted mb-4">Preço: <span class="fw-bold text-primary fs-5">R$ 111,00</span></p>
+          <p class="card-text text-muted mb-4" style="font-size: 0.9rem;">Oferta: <span class="fw-bold text-primary fs-4 d-block">R$ 111,00</span></p>
 
-          <button class="btn btn-dark btn-add-to-cart w-100 fw-semibold py-2 rounded-3 shadow-sm">Adicionar ao Carrinho</button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-
-      <div class="card h-100 border-0 shadow-sm hover-shadow transition" style="transition: all 0.3s ease; border-radius: 12px; overflow: hidden;">
-
-        <img src="./image/São Paulo.jpg" class="card-img-top" alt="Time 2" style="height: 280px; object-fit: cover;">
-
-        <div class="card-body d-flex flex-column justify-content-between p-4">
-
-          <h5 class="card-title fw-bold text-dark mb-2">São Paulo</h5>
-
-          <p class="card-text text-muted mb-4">Preço: <span class="fw-bold text-primary fs-5">R$ 100,00</span></p>
-
-          <button class="btn btn-dark btn-add-to-cart w-100 fw-semibold py-2 rounded-3 shadow-sm">Adicionar ao Carrinho</button>
+          <button class="btn btn-dark btn-add-to-cart w-100 fw-bold py-3 rounded-pill shadow-sm text-uppercase" style="font-size: 0.75rem; letter-spacing: 1px;">Adicionar ao Carrinho</button>
 
         </div>
 
@@ -109,49 +112,17 @@
 
     <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
 
-      <div class="card h-100 border-0 shadow-sm hover-shadow transition" style="transition: all 0.3s ease; border-radius: 12px; overflow: hidden;">
+      <div class="card h-100 border-0 shadow-sm hover-shadow transition" style="transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); border-radius: 16px; overflow: hidden; background: #fff;">
 
-        <img src="./image/Atletico MG.jpg" class="card-img-top" alt="Time 2" style="height: 280px; object-fit: cover;">
+        <img src="./image/São Paulo.jpg" class="card-img-top" alt="Time 2" style="height: 300px; object-fit: cover; filter: brightness(0.95);">
 
-        <div class="card-body d-flex flex-column justify-content-between p-4">
+        <div class="card-body d-flex flex-column justify-content-between p-4 text-center">
 
-          <h5 class="card-title fw-bold text-dark mb-2">Atletico MG</h5>
+          <h5 class="card-title fw-extrabold text-dark mb-2 text-uppercase" style="letter-spacing: 0.5px; font-size: 1.1rem;">São Paulo</h5>
 
-          <p class="card-text text-muted mb-4">Preço: <span class="fw-bold text-primary fs-5">R$ 100,00</span></p>
+          <p class="card-text text-muted mb-4" style="font-size: 0.9rem;">Oferta: <span class="fw-bold text-primary fs-4 d-block">R$ 100,00</span></p>
 
-          <button class="btn btn-dark btn-add-to-cart w-100 fw-semibold py-2 rounded-3 shadow-sm">Adicionar ao Carrinho</button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-
-      <div class="card h-100 border-0 shadow-sm hover-shadow transition" style="transition: all 0.3s ease; border-radius: 12px; overflow: hidden;">
-        <img src="./image/RedBull.jpg" class="card-img-top" alt="Time 2" style="height: 280px; object-fit: cover;">
-        <div class="card-body d-flex flex-column justify-content-between p-4">
-          <h5 class="card-title fw-bold text-dark mb-2">Red Bull Bragantino</h5>
-          <p class="card-text text-muted mb-4">Preço: <span class="fw-bold text-primary fs-5">R$ 130,00</span></p>
-          <button class="btn btn-dark btn-add-to-cart w-100 fw-semibold py-2 rounded-3 shadow-sm">Adicionar ao Carrinho</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-
-      <div class="card h-100 border-0 shadow-sm hover-shadow transition" style="transition: all 0.3s ease; border-radius: 12px; overflow: hidden;">
-
-        <img src="./image/Vasco.jpg" class="card-img-top" alt="Time 2" style="height: 280px; object-fit: cover;">
-
-        <div class="card-body d-flex flex-column justify-content-between p-4">
-
-          <h5 class="card-title fw-bold text-dark mb-2">Vasco</h5>
-
-          <p class="card-text text-muted mb-4">Preço: <span class="fw-bold text-primary fs-5">R$ 90,00</span></p>
-
-          <button class="btn btn-dark btn-add-to-cart w-100 fw-semibold py-2 rounded-3 shadow-sm">Adicionar ao Carrinho</button>
+          <button class="btn btn-dark btn-add-to-cart w-100 fw-bold py-3 rounded-pill shadow-sm text-uppercase" style="font-size: 0.75rem; letter-spacing: 1px;">Adicionar ao Carrinho</button>
 
         </div>
 
@@ -161,12 +132,64 @@
 
     <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
 
-      <div class="card h-100 border-0 shadow-sm hover-shadow transition" style="transition: all 0.3s ease; border-radius: 12px; overflow: hidden;">
-        <img src="./image/Palmeiras.jpg" class="card-img-top" alt="Time 2" style="height: 280px; object-fit: cover;">
-        <div class="card-body d-flex flex-column justify-content-between p-4">
-          <h5 class="card-title fw-bold text-dark mb-2">Palmeiras</h5>
-          <p class="card-text text-muted mb-4">Preço: <span class="fw-bold text-primary fs-5">R$ 110,00</span></p>
-          <button class="btn btn-dark btn-add-to-cart w-100 fw-semibold py-2 rounded-3 shadow-sm">Adicionar ao Carrinho</button>
+      <div class="card h-100 border-0 shadow-sm hover-shadow transition" style="transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); border-radius: 16px; overflow: hidden; background: #fff;">
+
+        <img src="./image/Atletico MG.jpg" class="card-img-top" alt="Time 2" style="height: 300px; object-fit: cover; filter: brightness(0.95);">
+
+        <div class="card-body d-flex flex-column justify-content-between p-4 text-center">
+
+          <h5 class="card-title fw-extrabold text-dark mb-2 text-uppercase" style="letter-spacing: 0.5px; font-size: 1.1rem;">Atletico MG</h5>
+
+          <p class="card-text text-muted mb-4" style="font-size: 0.9rem;">Oferta: <span class="fw-bold text-primary fs-4 d-block">R$ 100,00</span></p>
+
+          <button class="btn btn-dark btn-add-to-cart w-100 fw-bold py-3 rounded-pill shadow-sm text-uppercase" style="font-size: 0.75rem; letter-spacing: 1px;">Adicionar ao Carrinho</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+
+      <div class="card h-100 border-0 shadow-sm hover-shadow transition" style="transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); border-radius: 16px; overflow: hidden; background: #fff;">
+        <img src="./image/RedBull.jpg" class="card-img-top" alt="Time 2" style="height: 300px; object-fit: cover; filter: brightness(0.95);">
+        <div class="card-body d-flex flex-column justify-content-between p-4 text-center">
+          <h5 class="card-title fw-extrabold text-dark mb-2 text-uppercase" style="letter-spacing: 0.5px; font-size: 1.1rem;">Red Bull Bragantino</h5>
+          <p class="card-text text-muted mb-4" style="font-size: 0.9rem;">Oferta: <span class="fw-bold text-primary fs-4 d-block">R$ 130,00</span></p>
+          <button class="btn btn-dark btn-add-to-cart w-100 fw-bold py-3 rounded-pill shadow-sm text-uppercase" style="font-size: 0.75rem; letter-spacing: 1px;">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+
+      <div class="card h-100 border-0 shadow-sm hover-shadow transition" style="transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); border-radius: 16px; overflow: hidden; background: #fff;">
+
+        <img src="./image/Vasco.jpg" class="card-img-top" alt="Time 2" style="height: 300px; object-fit: cover; filter: brightness(0.95);">
+
+        <div class="card-body d-flex flex-column justify-content-between p-4 text-center">
+
+          <h5 class="card-title fw-extrabold text-dark mb-2 text-uppercase" style="letter-spacing: 0.5px; font-size: 1.1rem;">Vasco</h5>
+
+          <p class="card-text text-muted mb-4" style="font-size: 0.9rem;">Oferta: <span class="fw-bold text-primary fs-4 d-block">R$ 90,00</span></p>
+
+          <button class="btn btn-dark btn-add-to-cart w-100 fw-bold py-3 rounded-pill shadow-sm text-uppercase" style="font-size: 0.75rem; letter-spacing: 1px;">Adicionar ao Carrinho</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+
+      <div class="card h-100 border-0 shadow-sm hover-shadow transition" style="transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); border-radius: 16px; overflow: hidden; background: #fff;">
+        <img src="./image/Palmeiras.jpg" class="card-img-top" alt="Time 2" style="height: 300px; object-fit: cover; filter: brightness(0.95);">
+        <div class="card-body d-flex flex-column justify-content-between p-4 text-center">
+          <h5 class="card-title fw-extrabold text-dark mb-2 text-uppercase" style="letter-spacing: 0.5px; font-size: 1.1rem;">Palmeiras</h5>
+          <p class="card-text text-muted mb-4" style="font-size: 0.9rem;">Oferta: <span class="fw-bold text-primary fs-4 d-block">R$ 110,00</span></p>
+          <button class="btn btn-dark btn-add-to-cart w-100 fw-bold py-3 rounded-pill shadow-sm text-uppercase" style="font-size: 0.75rem; letter-spacing: 1px;">Adicionar ao Carrinho</button>
         </div>
       </div>
   </div>
@@ -176,30 +199,30 @@
 
 <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
-      <div class="modal-header border-0 pb-0">
-        <h5 class="modal-title fw-bold text-dark fs-4" id="cartModalLabel">Seu Carrinho</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-content border-0 shadow-lg" style="border-radius: 20px; overflow: hidden;">
+      <div class="modal-header bg-dark text-white border-0 py-4">
+        <h5 class="modal-title fw-bold text-uppercase fs-5" id="cartModalLabel" style="letter-spacing: 1px;">🛍️ Seu Carrinho</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
-      <div class="modal-body p-4">
-        <p class="text-muted">Itens adicionados aparecerão aqui.</p>
+      <div class="modal-body p-4 bg-light">
+        <p class="text-muted fw-medium text-center py-3">Seus itens selecionados aparecerão aqui prontos para o jogo.</p>
       </div>
 
-      <div class="modal-footer border-0 pt-0">
-        <button type="button" class="btn btn-light fw-medium px-4 py-2 rounded-3" data-bs-dismiss="modal">Continuar Comprando</button>
-        <button type="button" class="btn btn-primary fw-bold px-4 py-2 rounded-3 shadow-sm">Finalizar Compra</button>
+      <div class="modal-footer border-0 bg-white py-3">
+        <button type="button" class="btn btn-outline-secondary fw-bold px-4 py-2 rounded-pill text-uppercase" data-bs-dismiss="modal" style="font-size: 0.75rem;">Voltar</button>
+        <button type="button" class="btn btn-primary fw-bold px-4 py-2 rounded-pill shadow-sm text-uppercase" style="font-size: 0.75rem;">Finalizar Compra</button>
       </div>
     </div>
   </div>
 </div>
 
-<footer class="bg-dark text-white py-5 mt-5">
+<footer class="bg-dark text-white py-5 mt-5" style="border-top: 5px solid #0d6efd;">
   <div class="container text-center">
-    <h5 class="fw-bold mb-3">FootCoder</h5>
-    <p class="text-secondary small mb-4">A melhor seleção de mantos sagrados para o seu guarda-roupa.</p>
-    <hr class="border-secondary opacity-25 mb-4">
-    <p class="small text-secondary mb-0">&copy; <span id="current-year"></span> FootCoder. Todos os direitos reservados.</p>
+    <h5 class="fw-bold mb-3 text-uppercase" style="letter-spacing: 2px;">Foot<span class="text-primary">Coder</span></h5>
+    <p class="text-secondary small mb-4 fw-light" style="max-width: 500px; margin: 0 auto;">Equipando campeões com a melhor tecnologia e estilo dentro e fora de campo.</p>
+    <hr class="border-secondary opacity-25 mb-4" style="width: 50px; margin: 0 auto;">
+    <p class="small text-secondary mb-0 fw-bold" style="letter-spacing: 1px;">&copy; <span id="current-year"></span> FOOTCODER. TODOS OS DIREITOS RESERVADOS.</p>
   </div>
 </footer>
 
