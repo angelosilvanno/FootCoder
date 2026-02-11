@@ -12,7 +12,10 @@ document.addEventListener("DOMContentLoaded", function() {
       const productPrice = card.querySelector('.card-text span').textContent.trim();
 
       let cart = JSON.parse(localStorage.getItem('cart')) || [];
-      cart.push({ nome: productName, preco: productPrice });
+      cart.push({
+        nome: productName,
+        preco: productPrice
+      });
       localStorage.setItem('cart', JSON.stringify(cart));
 
       updateCartCount();
@@ -23,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const cartItemsContainer = document.getElementById("cart-items");
     const cartCount = document.getElementById("cart-count");
     const cartTotal = document.getElementById("cart-total");
-    
+
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     if (cart.length > 0) {
@@ -34,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const newItem = document.createElement("li");
         newItem.className = "list-group-item d-flex justify-content-between align-items-center p-3 mb-2 shadow-sm border-0";
         newItem.style.borderRadius = "10px";
-        
+
         newItem.innerHTML = `
           <div>
             <h6 class="my-0 fw-bold">${item.nome}</h6>
@@ -100,3 +103,9 @@ function removeItem(index) {
   localStorage.setItem('cart', JSON.stringify(cart));
   window.location.reload();
 }
+
+const year = new Date().getFullYear();
+if (document.getElementById("current-year")) {
+  document.getElementById("current-year").textContent = year;
+}
+document.querySelectorAll(".auto-year").forEach(el => el.textContent = year);
