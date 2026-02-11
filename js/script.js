@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
   const addToCartButtons = document.querySelectorAll('.btn-add-to-cart');
 
+  updateCartCount();
+
   addToCartButtons.forEach(button => {
     button.addEventListener('click', function(event) {
       event.preventDefault();
@@ -13,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
       cart.push({ nome: productName, preco: productPrice });
       localStorage.setItem('cart', JSON.stringify(cart));
 
-      window.location.href = 'carrinho.html';
+      updateCartCount();
     });
   });
 
@@ -83,6 +85,14 @@ document.addEventListener("DOMContentLoaded", function() {
     yearSpan.textContent = new Date().getFullYear();
   }
 });
+
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const cartBadge = document.getElementById('cart-count');
+  if (cartBadge) {
+    cartBadge.textContent = cart.length;
+  }
+}
 
 function removeItem(index) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
